@@ -1,12 +1,21 @@
-<div class="jumbotron">
-  <h1 class="display-3">Email app !</h1>
-  <p class="lead"></p>
-  <hr class="my-4">
-  <p></p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-  </p>
+<br/>
+
+<div class="row">
+
+  <div class="col d-flex justify-content-center" >
+    <br/>
+
+    <%= form_tag(emails_path, method: "post")  do %>
+    <%= submit_tag("Nouvel email", class: "btn btn-secondary btn-lg") %>
+    <%end%>
+
+    <br /><br />
+  </div>
+  <div class="col">
+  </div>
 </div>
+
+
 
 <div class="row">
   <div class="col">
@@ -20,19 +29,16 @@
       </thead>
 
       <tbody>
-        <tr class="table-light">
-          <td >Objet 1</th>
-        </tr>
-        <tr class="table-light">
-          <td >Objet 2 </th>
-        </tr>
-        <tr class="table-light">
-          <td >Objet 3</th>
-        </tr>
+			  <% @emails.each do |email|  %>
+              
+          <tr class="table-light" id="<%=email.id%>">
+            <td ><%=email.object%></th>
+          </tr>
+			  <% end %>
       </tbody>
     </table>
   </div>
-
+  
   <div class="col">
     <h2>Contenu Email</h2>
   </div>
