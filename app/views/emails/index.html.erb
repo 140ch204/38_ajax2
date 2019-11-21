@@ -5,7 +5,7 @@
   <div class="col d-flex justify-content-center" >
     <br/>
 
-    <%= form_tag(emails_path, method: "post")  do %>
+    <%= form_tag(emails_path, method: "post", remote: true)  do %>
     <%= submit_tag("Nouvel email", class: "btn btn-secondary btn-lg") %>
     <%end%>
 
@@ -28,7 +28,7 @@
         </tr>
       </thead>
 
-      <tbody>
+      <tbody id="emails">
 			  <% @emails.each do |email|  %>
               
           <tr class="table-light" id="<%=email.id%>">
