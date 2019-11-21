@@ -1,2 +1,2 @@
 document.getElementById("emailObject").innerHTML = " <%= @email.object%>" ;
-document.getElementById("emailBody").innerHTML ="<%= @email.body %>";
+document.getElementById("emailBody").innerHTML ="<%= j render 'show', email: @email %>";
