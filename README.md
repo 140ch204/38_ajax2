@@ -1,4 +1,4 @@
-<h1> Mail app </h1>
+<h1> Mail app by Julien Besombes</h1>
 
 <h2> THP 21/11/2019 </h2>
 
@@ -6,7 +6,7 @@
 
 > git clone https://github.com/140ch204/38_ajax2
 >
-> cd 20_the_gossip_project
+> cd 38_ajax2
 >
 > bundle install
 >
