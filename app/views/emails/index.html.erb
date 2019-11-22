@@ -15,11 +15,9 @@
   </div>
 </div>
 
-
-
 <div class="row">
   <div class="col">
-    <h2> Liste email</h2>
+    <h2>Liste email</h2>
 
     <table class="table table-hover">
       <thead>
@@ -31,10 +29,10 @@
       <tbody id="emails">
 			  <% @emails.each do |email|  %>
               
-          <tr class="table-light" id="<%=email.id%>">
-          
-            <td ><%= link_to email.object, email_path(email.id), remote: true%></th>
+          <tr <%= (email.read)? "":"class = read" %>  id="<%=email.id%>">
+            <td> <%= link_to email.object, email_path(email.id), remote: true%></th>
           </tr>
+          
 			  <% end %>
       </tbody>
     </table>
