@@ -7,10 +7,10 @@
     <%= link_to "Supprimer", email_path(@email), method: :delete, class: "btn btn-danger btn-lg", remote: true %>
   </div>
   <br/><br/>
+  hello
   <div class="col">
-    <%= form_tag(emails_path, method: "post", remote: true)  do %>
-    <%= submit_tag("Marquer comme non lu", class: "btn btn-secondary btn-lg") %>
-    <%end%>
+  <%= link_to "Marquer comme non lu", email_path(@email), method: :patch, class: "btn btn-secondary btn-lg", remote: true %>
+
   </div>
 
   <div class="col">
