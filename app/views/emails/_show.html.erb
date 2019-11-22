@@ -3,10 +3,10 @@
 
 <div class="row">
 
-  <div class="col d-flex justify-content-center" >
-    <%= link_to "Supprimer", email_path(@email), method: :delete, class: "btn btn-danger btn-lg" %>
+  <div class="col " >
+    <%= link_to "Supprimer", email_path(@email), method: :delete, class: "btn btn-danger btn-lg", remote: true %>
   </div>
-
+  <br/><br/>
   <div class="col">
     <%= form_tag(emails_path, method: "post", remote: true)  do %>
     <%= submit_tag("Marquer comme non lu", class: "btn btn-secondary btn-lg") %>

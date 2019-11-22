@@ -32,6 +32,7 @@
 			  <% @emails.each do |email|  %>
               
           <tr class="table-light" id="<%=email.id%>">
+          
             <td ><%= link_to email.object, email_path(email.id), remote: true%></th>
           </tr>
 			  <% end %>
