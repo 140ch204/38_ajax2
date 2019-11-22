@@ -1,24 +1,34 @@
-# README
+<h1> Mail app </h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<h2> THP 21/11/2019 </h2>
 
-Things you may want to cover:
+1. Installation : 
 
-* Ruby version
+> git clone https://github.com/140ch204/20_the_gossip_project.git
+>
+> cd 20_the_gossip_project
+>
+> bundle install
+>
+>rails db:drop
+> 
+> rails db:create
+>
+> rails db:migrate
+> 
+> rails db:seed
+>
+> rails s
+>
 
-* System dependencies
+Dans le navigateur aller à l'URL suivante : 
 
-* Configuration
+http://localhost:3000/
 
-* Database creation
+Enjoy !
 
-* Database initialization
+2. Connaître les versions utilisées : 
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+>
+> rails about
+>

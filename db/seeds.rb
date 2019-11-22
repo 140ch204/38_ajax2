@@ -9,6 +9,9 @@
 
 require 'faker'
 
-10.times do
-  Email.create(object: Faker::Book.title, body: Faker::Lorem.sentence)
+Email.destroy_all
+3.times do
+  Email.create(object: Faker::Book.title, body: Faker::Lorem.sentence, read: false)
 end
+
+puts "Seed : Ok !"
